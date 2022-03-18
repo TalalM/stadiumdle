@@ -148,12 +148,24 @@ export function Infos({ isOpen, close, settingsData }: InfosProps) {
           Want to support?{" "}
           <a
             className="underline"
-            href="https://www.ko-fi.com/teuteuf"
+            href="https://www.ko-fi.com/elpastoristo"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Twemoji
               text="Buy me a coffee! ☕"
+              options={{ className: "inline-block" }}
+            />
+          </a>
+          {" "} or to the {" "}
+          <a
+            className="underline"
+            href="https://www.ko-fi.com/teuteuf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Twemoji
+              text="original creator ☕"
               options={{ className: "inline-block" }}
             />
           </a>

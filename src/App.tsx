@@ -124,7 +124,7 @@ function App() {
             ) : (
               <a
                 className="underline pl-1"
-                href="https://www.ko-fi.com/teuteuf"
+                href="https://www.ko-fi.com/elpastoristo"
                 target="_blank"
                 rel="noopener noreferrer"
               >
