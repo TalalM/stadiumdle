@@ -3,7 +3,7 @@ import { useCallback, useState } from "react";
 export interface SettingsData {
   noImageMode: boolean;
   rotationMode: boolean;
-  distanceUnit: "km" | "miles";
+  distanceUnit: "km";
   theme: "light" | "dark";
   shiftDayCount: number;
   allowShiftingDay: boolean;

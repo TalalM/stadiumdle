@@ -1,7 +1,7 @@
 import { Guesses } from "../Guesses";
 import { Panel } from "./Panel";
 import React from "react";
-import { Worldle } from "../Worldle";
+import { Countrydle } from "../Countrydle";
 import { formatDistance } from "../../domain/geography";
 import { SettingsData } from "../../hooks/useSettings";
 import { Twemoji } from "@teuteuf/react-emoji-render";
@@ -18,9 +18,9 @@ export function InfosFr({ isOpen, close, settingsData }: InfosProps) {
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">
         <div>
           {" "}
-          Devine le <Worldle /> en 6 essais.
+          Devine le <Countrydle /> en 6 essais.
         </div>
-        <div>Chaque essai doit être un pays, un territoire, etc... valide.</div>
+        <div>Chaque essai doit être un pays (reconnu par l'ONU) valide.</div>
         <div>
           Après chaque essai, vous aurez la distance, la direction et la
           proximité entre votre essai et le pays cible.
@@ -88,7 +88,7 @@ export function InfosFr({ isOpen, close, settingsData }: InfosProps) {
         </div>
       </div>
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3 font-bold">
-        Un nouveau <Worldle /> sera disponible chaque jour !
+        Un nouveau <Countrydle /> sera disponible chaque jour !
       </div>
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">
         <div className="font-bold">Une question ou suggestion ?</div>
@@ -106,41 +106,37 @@ export function InfosFr({ isOpen, close, settingsData }: InfosProps) {
         </div>
       </div>
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">
-        <Worldle /> a été <span className="font-bold">très</span> inspiré par{" "}
+        <Countrydle /> est une copie quasi exacte de {" "}
         <a
           className="underline"
-          href="https://www.powerlanguage.co.uk/wordle/"
+          href="http://worldle.teuteuf.fr/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Worldle</a>{" "} créé par {" "}
+        <a
+          className="underline"
+          href="https://twitter.com/teuteuf"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Wordle
-        </a>{" "}
-        créé par{" "}
-        <a
-          className="underline"
-          href="https://twitter.com/powerlanguish"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Josh Wardle (@powerlanguish)
-        </a>
-        .
+          @teuteuf
+        </a>{" "}, la différence principale étant que <Countrydle /> ne prend en compte que les pays et pas les territoires.
       </div>
       <div className="space-y-3 text-justify pb-3">
         <div>
           Fait par{" "}
           <a
             className="underline"
-            href="https://twitter.com/teuteuf"
+            href="https://twitter.com/talalmazroui"
             target="_blank"
             rel="noopener noreferrer"
           >
-            @teuteuf
+            @talalmazroui
           </a>{" "}
           - (
           <a
             className="underline"
-            href="https://github.com/teuteuf/worldle/"
+            href="https://github.com/TalalM/countrydle/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -152,12 +148,24 @@ export function InfosFr({ isOpen, close, settingsData }: InfosProps) {
           Vous voulez me soutenir ?{" "}
           <a
             className="underline"
-            href="https://www.ko-fi.com/teuteuf"
+            href="https://www.ko-fi.com/elpastoristo"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Twemoji
               text="Offrez moi un café ! ☕"
+              options={{ className: "inline-block" }}
+            />
+          </a>
+          {" "} ou au {" "}
+          <a
+            className="underline"
+            href="https://www.ko-fi.com/teuteuf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Twemoji
+              text="créateur original ☕"
               options={{ className: "inline-block" }}
             />
           </a>
