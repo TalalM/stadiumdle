@@ -68,11 +68,9 @@ export function generateSquareCharacters(
 
 export function formatDistance(
   distanceInMeters: number,
-  distanceUnit: "km" | "miles"
+  distanceUnit: "km"
 ) {
   const distanceInKm = distanceInMeters / 1000;
 
-  return distanceUnit === "km"
-    ? `${Math.round(distanceInKm)}km`
-    : `${Math.round(distanceInKm * 0.621371)}mi`;
+  return `${Math.round(distanceInKm)}km`;
 }

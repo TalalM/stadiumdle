@@ -7,7 +7,7 @@ import { Panel } from "./Panel";
 interface StatsProps {
   isOpen: boolean;
   close: () => void;
-  distanceUnit: "km" | "miles";
+  distanceUnit: "km";
 }
 
 export function Stats({ isOpen, close, distanceUnit }: StatsProps) {
