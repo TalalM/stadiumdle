@@ -33,9 +33,9 @@ const resources = {
         guessDistribution: "Guess distribution:",
       },
       install: {
-        title: "Worldle",
+        title: "Countrydle",
         descritpionTitle: "App Install:",
-        description: "Add Worldle to Home Screen to play it easily!",
+        description: "Add Countrydle to Home Screen to play it easily!",
         instructionTitle: "Instructions:",
         instructionActionOk: "OK",
         instructionActionCancel: "Cancel",
@@ -86,10 +86,10 @@ const resources = {
         guessDistribution: "Répartitions des victoires:",
       },
       install: {
-        title: "Worldle",
+        title: "Countrydle",
         descritpionTitle: "Installer l'app:",
         description:
-          "Ajouter Worldle sur l'écran d'accueil pour le retrouver plus facilement !",
+          "Ajouter Countrydle sur l'écran d'accueil pour le retrouver plus facilement !",
         instructionTitle: "Instructions :",
         instructionActionOk: "OK",
         instructionActionCancel: "Annuler",
