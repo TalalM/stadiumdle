@@ -1,9 +1,9 @@
 import React from "react";
 
-export function Worldle() {
+export function Countrydle() {
   return (
     <span className="font-bold">
-      WOR<span className="text-green-600">L</span>DLE
+      COUNTRY<span className="text-green-600">D</span>LE
     </span>
   );
 }
