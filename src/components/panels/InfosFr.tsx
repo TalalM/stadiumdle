@@ -20,7 +20,7 @@ export function InfosFr({ isOpen, close, settingsData }: InfosProps) {
           {" "}
           Devine le <Countrydle /> en 6 essais.
         </div>
-        <div>Chaque essai doit être un pays (reconnu par l'ONU) valide.</div>
+        <div>Chaque essai doit être un pays valide.</div>
         <div>
           Après chaque essai, vous aurez la distance, la direction et la
           proximité entre votre essai et le pays cible.
@@ -91,9 +91,8 @@ export function InfosFr({ isOpen, close, settingsData }: InfosProps) {
         Un nouveau <Countrydle /> sera disponible chaque jour !
       </div>
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">
-        <div className="font-bold">Une question ou suggestion ?</div>
         <div>
-          Rendez-vous sur la{" "}
+          <Countrydle /> n'a pas de FAQ mais vous pouvez aller regarder la{" "}
           <a
             className="underline"
             href="https://worldle.notion.site/Worldle-4005ca16fc9341e7be8adcfd30628146"
@@ -102,7 +101,15 @@ export function InfosFr({ isOpen, close, settingsData }: InfosProps) {
           >
             FAQ Worldle
           </a>{" "}
-          !
+          si vous avez des questions ! Vous pouvez aussi directement me contacter sur {" "}
+          <a
+            className="underline"
+            href="https://twitter.com/talalmazroui"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @talalmazroui
+          </a>.
         </div>
       </div>
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">
