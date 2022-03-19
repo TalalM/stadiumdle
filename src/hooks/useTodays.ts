@@ -65,7 +65,7 @@ export function useTodays(dayString: string): [
 }
 
 function getCountry(dayString: string) {
-  dayString = dayString + "-countrydle"
+  dayString = dayString + "-flagdle"
   const forcedCountryCode = forcedCountries[dayString];
   const forcedCountry =
     forcedCountryCode != null
