@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 import { InfosFr } from "./components/panels/InfosFr";
 import { Settings } from "./components/panels/Settings";
 import { useSettings } from "./hooks/useSettings";
-import { Countrydle } from "./components/Countrydle";
+import { Flagdle } from "./components/Flagdle";
 import { Stats } from "./components/panels/Stats";
 import { useReactPWAInstall } from "@teuteuf/react-pwa-install";
 import { InstallButton } from "./components/InstallButton";
@@ -88,7 +88,7 @@ function App() {
               <InstallButton pwaInstall={pwaInstall} />
             )}
             <h1 className="text-4xl font-bold uppercase tracking-wide text-center my-1 flex-auto">
-              Country<span className="text-green-600">d</span>le
+              Flag<span className="text-green-600">d</span>le
             </h1>
             <button
               className="ml-3 text-xl"
@@ -111,7 +111,7 @@ function App() {
               text="❤️"
               className="flex items-center justify-center mr-1"
             />{" "}
-            <Countrydle />? -
+            <Flagdle />? -
             {country && supportLink[country.code] != null ? (
               <a
                 className="underline pl-1"

@@ -1,9 +1,9 @@
 import React from "react";
 
-export function Countrydle() {
+export function Flagdle() {
   return (
     <span className="font-bold">
-      COUNTRY<span className="text-green-600">D</span>LE
+      FLAG<span className="text-green-600">D</span>LE
     </span>
   );
 }

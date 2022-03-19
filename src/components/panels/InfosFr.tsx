@@ -1,7 +1,7 @@
 import { Guesses } from "../Guesses";
 import { Panel } from "./Panel";
 import React from "react";
-import { Countrydle } from "../Countrydle";
+import { Flagdle } from "../Flagdle";
 import { formatDistance } from "../../domain/geography";
 import { SettingsData } from "../../hooks/useSettings";
 import { Twemoji } from "@teuteuf/react-emoji-render";
@@ -18,10 +18,9 @@ export function InfosFr({ isOpen, close, settingsData }: InfosProps) {
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">
         <div>
           {" "}
-          Devinez le <Countrydle /> en 6 essais.
+          Devinez le <Flagdle /> en 6 essais.
         </div>
-        <div>Chaque essai doit être un pays valide.</div>
-        <div>
+        <div>Chaque essai doit être un pays valide.<br/>
           Après chaque essai, vous aurez la distance, la direction et la
           proximité entre votre essai et le pays cible.
         </div>
@@ -88,11 +87,11 @@ export function InfosFr({ isOpen, close, settingsData }: InfosProps) {
         </div>
       </div>
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3 font-bold">
-        Un nouveau <Countrydle /> sera disponible chaque jour !
+        Un nouveau <Flagdle /> sera disponible chaque jour !
       </div>
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">
         <div>
-          <Countrydle /> n'a pas de FAQ mais vous pouvez aller regarder la{" "}
+          <Flagdle /> n'a pas de FAQ mais vous pouvez aller regarder la{" "}
           <a
             className="underline"
             href="https://worldle.notion.site/Worldle-4005ca16fc9341e7be8adcfd30628146"
@@ -113,7 +112,7 @@ export function InfosFr({ isOpen, close, settingsData }: InfosProps) {
         </div>
       </div>
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">
-        <Countrydle /> est une copie quasi exacte de {" "}
+        <Flagdle /> est <b>fortement</b> inspiré de{" "}
         <a
           className="underline"
           href="http://worldle.teuteuf.fr/"
@@ -127,7 +126,7 @@ export function InfosFr({ isOpen, close, settingsData }: InfosProps) {
           rel="noopener noreferrer"
         >
           @teuteuf
-        </a>{" "}, la différence principale étant que <Countrydle /> ne prend en compte que les pays et pas les territoires.
+        </a>. Sauf que sur <Flagdle />, vous devinez le pays à partir de son drapeau et pas sa forme !
       </div>
       <div className="space-y-3 text-justify pb-3">
         <div>
@@ -143,13 +142,24 @@ export function InfosFr({ isOpen, close, settingsData }: InfosProps) {
           - (
           <a
             className="underline"
-            href="https://github.com/TalalM/countrydle/"
+            href="https://github.com/TalalM/flagdle/"
             target="_blank"
             rel="noopener noreferrer"
           >
             code source
           </a>
           )
+        </div>
+        <div>
+          Vous pouvez aller voir mes autres projets ici :{" "}
+          <a
+            className="underline"
+            href="https://www.countrydle.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Countrydle
+          </a>
         </div>
         <div>
           Vous voulez me soutenir ?{" "}
@@ -161,18 +171,6 @@ export function InfosFr({ isOpen, close, settingsData }: InfosProps) {
           >
             <Twemoji
               text="Offrez moi un café ! ☕"
-              options={{ className: "inline-block" }}
-            />
-          </a>
-          {" "} ou au {" "}
-          <a
-            className="underline"
-            href="https://www.ko-fi.com/teuteuf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Twemoji
-              text="créateur original ☕"
               options={{ className: "inline-block" }}
             />
           </a>

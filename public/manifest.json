@@ -1,6 +1,6 @@
 {
-  "short_name": "Countrydle",
-  "name": "Worldle game with only countries",
+  "short_name": "Flagdle",
+  "name": "Wordle like game with country flags",
   "icons": [
     {
       "src": "favicon.ico",

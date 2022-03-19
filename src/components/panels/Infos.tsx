@@ -1,7 +1,7 @@
 import { Guesses } from "../Guesses";
 import { Panel } from "./Panel";
 import React from "react";
-import { Countrydle } from "../Countrydle";
+import { Flagdle } from "../Flagdle";
 import { formatDistance } from "../../domain/geography";
 import { SettingsData } from "../../hooks/useSettings";
 import { Twemoji } from "@teuteuf/react-emoji-render";
@@ -17,7 +17,7 @@ export function Infos({ isOpen, close, settingsData }: InfosProps) {
     <Panel title="How to play" isOpen={isOpen} close={close}>
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">
         <div>
-          Guess the <Countrydle /> in 6 guesses.
+          Guess the <Flagdle /> in 6 guesses.
         </div>
         <div>Each guess must be a valid country.</div>
         <div>
@@ -86,11 +86,11 @@ export function Infos({ isOpen, close, settingsData }: InfosProps) {
         </div>
       </div>
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3 font-bold">
-        A new <Countrydle /> will be available every day!
+        A new <Flagdle /> will be available every day!
       </div>
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">
         <div>
-          <Countrydle /> has no FAQ but you can check the {" "}
+          <Flagdle /> has no FAQ but you can check the {" "}
           <a
             className="underline"
             href="https://worldle.notion.site/Worldle-b84ab0f002e34866980a4d47cf9291b7"
@@ -103,7 +103,7 @@ export function Infos({ isOpen, close, settingsData }: InfosProps) {
         </div>
       </div>
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">
-        <Countrydle /> is an almost full copycat of {" "}
+        <Flagdle /> is <b>heavily</b> inspired by{" "}
         <a
           className="underline"
           href="http://worldle.teuteuf.fr/"
@@ -119,7 +119,7 @@ export function Infos({ isOpen, close, settingsData }: InfosProps) {
           rel="noopener noreferrer"
         >
           @teuteuf
-        </a>{" "}, the main difference being that <Countrydle /> only uses countries and not territories.
+        </a>. But on <Flagdle />, you must guess the country by its flag, not its shape!
       </div>
       <div className="space-y-3 text-justify pb-3">
         <div>
@@ -135,13 +135,24 @@ export function Infos({ isOpen, close, settingsData }: InfosProps) {
           - (
           <a
             className="underline"
-            href="https://github.com/TalalM/countrydle/"
+            href="https://github.com/TalalM/flagdle/"
             target="_blank"
             rel="noopener noreferrer"
           >
             source code
           </a>
           )
+        </div>
+        <div>
+          You can check my other projects here:{" "}
+          <a
+            className="underline"
+            href="https://www.countrydle.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Countrydle
+          </a>
         </div>
         <div>
           Want to support?{" "}
@@ -153,18 +164,6 @@ export function Infos({ isOpen, close, settingsData }: InfosProps) {
           >
             <Twemoji
               text="Buy me a coffee! ☕"
-              options={{ className: "inline-block" }}
-            />
-          </a>
-          {" "} or to the {" "}
-          <a
-            className="underline"
-            href="https://www.ko-fi.com/teuteuf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Twemoji
-              text="original creator ☕"
               options={{ className: "inline-block" }}
             />
           </a>
