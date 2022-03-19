@@ -19,7 +19,7 @@ export function Infos({ isOpen, close, settingsData }: InfosProps) {
         <div>
           Guess the <Countrydle /> in 6 guesses.
         </div>
-        <div>Each guess must be a valid (recognized by the UN) country.</div>
+        <div>Each guess must be a valid country.</div>
         <div>
           After each guess, you will have the distance, the direction and the
           proximity from your guess and the target country.
@@ -89,9 +89,8 @@ export function Infos({ isOpen, close, settingsData }: InfosProps) {
         A new <Countrydle /> will be available every day!
       </div>
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">
-        <div className="font-bold">Any question or suggestion?</div>
         <div>
-          Check the{" "}
+          <Countrydle /> has no FAQ but you can check the {" "}
           <a
             className="underline"
             href="https://worldle.notion.site/Worldle-b84ab0f002e34866980a4d47cf9291b7"
