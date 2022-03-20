@@ -5,7 +5,6 @@ import React, { useEffect, useMemo, useState } from "react";
 import { Infos } from "./components/panels/Infos";
 import { useTranslation } from "react-i18next";
 import { InfosFr } from "./components/panels/InfosFr";
-import { Settings } from "./components/panels/Settings";
 import { useSettings } from "./hooks/useSettings";
 import { Flagdle } from "./components/Flagdle";
 import { Stats } from "./components/panels/Stats";
@@ -33,11 +32,7 @@ function App() {
   const [settingsData, updateSettings] = useSettings();
 
   useEffect(() => {
-    if (settingsData.theme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
       document.documentElement.classList.remove("dark");
-    }
   }, [settingsData.theme]);
 
   return (
@@ -63,12 +58,6 @@ function App() {
           settingsData={settingsData}
         />
       )}
-      <Settings
-        isOpen={settingsOpen}
-        close={() => setSettingsOpen(false)}
-        settingsData={settingsData}
-        updateSettings={updateSettings}
-      />
       <Stats
         isOpen={statsOpen}
         close={() => setStatsOpen(false)}
@@ -96,13 +85,6 @@ function App() {
               onClick={() => setStatsOpen(true)}
             >
               <Twemoji text="📈" />
-            </button>
-            <button
-              className="ml-3 text-xl"
-              type="button"
-              onClick={() => setSettingsOpen(true)}
-            >
-              <Twemoji text="⚙️" />
             </button>
           </header>
           <Game settingsData={settingsData} updateSettings={updateSettings} />

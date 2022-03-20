@@ -50,7 +50,7 @@ export function computeProximityPercent(distance: number): number {
 
 export function generateSquareCharacters(
   proximity: number,
-  theme: "light" | "dark"
+  theme: "light"
 ): string[] {
   const characters = new Array<string>(5);
   const greenSquareCount = Math.floor(proximity / 20);
