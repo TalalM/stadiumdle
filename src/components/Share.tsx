@@ -12,7 +12,7 @@ import { Guess } from "../domain/guess";
 import React from "react";
 import { SettingsData } from "../hooks/useSettings";
 
-const START_DATE = DateTime.fromISO("2022-03-18");
+const START_DATE = DateTime.fromISO("2022-03-20");
 
 interface ShareProps {
   guesses: Guess[];
@@ -49,7 +49,7 @@ export function Share({
     const bestPercent = `(${computeProximityPercent(
       bestDistance
     ).toString()}%)`;
-    const title = `#Flagdle #${dayCount} ${guessCount}/6 ${bestPercent}${difficultyModifierEmoji}`;
+    const title = `#Stadiumdle #${dayCount} ${guessCount}/6 ${bestPercent}${difficultyModifierEmoji}`;
 
     const guessString = guesses
       .map((guess) => {
@@ -60,7 +60,7 @@ export function Share({
       })
       .join("\n");
 
-    return [title, guessString, "https://www.flagdle.app"].join("\n");
+    return [title, guessString, "https://www.stadiumdle.com"].join("\n");
   }, [dayString, guesses, hideImageMode, rotationMode, theme]);
 
   return (

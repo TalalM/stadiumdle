@@ -1,12 +1,9 @@
-# FLAGDLE
+# STADIUMDLE
 
-Play this flag wordle here: https://www.flagdle.app !
+Play this stadium wordle here: https://www.stadiumdle.com !
 
 ## Resources used:
 
-- Countries with long/lat => https://developers.google.com/public-data/docs/canonical/countries_csv
-- French country names => https://fr.wikipedia.org/wiki/ISO_3166
-- Flag images => https://flagicons.lipis.dev/
 - Fixed images => http://www.amcharts.com/svg-maps/ & Wikipedia
 - Emojis & World icon => https://github.com/twitter/twemoji
 

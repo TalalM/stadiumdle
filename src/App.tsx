@@ -6,7 +6,7 @@ import { Infos } from "./components/panels/Infos";
 import { useTranslation } from "react-i18next";
 import { InfosFr } from "./components/panels/InfosFr";
 import { useSettings } from "./hooks/useSettings";
-import { Flagdle } from "./components/Flagdle";
+import { Stadiumdle } from "./components/Stadiumdle";
 import { Stats } from "./components/panels/Stats";
 import { useReactPWAInstall } from "@teuteuf/react-pwa-install";
 import { InstallButton } from "./components/InstallButton";
@@ -21,7 +21,7 @@ function App() {
   const { t, i18n } = useTranslation();
 
   const dayString = useMemo(getDayString, []);
-  const [{ country }] = useTodays(dayString);
+  const [{ city }] = useTodays(dayString);
 
   const { pwaInstall, supported, isInstalled } = useReactPWAInstall();
 
@@ -77,7 +77,7 @@ function App() {
               <InstallButton pwaInstall={pwaInstall} />
             )}
             <h1 className="text-4xl font-bold uppercase tracking-wide text-center my-1 flex-auto">
-              Flag<span className="text-green-600">d</span>le
+              Stadium<span className="text-green-600">d</span>le
             </h1>
             <button
               className="ml-3 text-xl"
@@ -93,15 +93,15 @@ function App() {
               text="❤️"
               className="flex items-center justify-center mr-1"
             />{" "}
-            <Flagdle />? -
-            {country && supportLink[country.code] != null ? (
+            <Stadiumdle />? -
+            {city && supportLink[city.code] != null ? (
               <a
                 className="underline pl-1"
-                href={supportLink[country.code]}
+                href={supportLink[city.code]}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <div className="w-max">{t(`support.${country.code}`)}</div>
+                <div className="w-max">{t(`support.${city.code}`)}</div>
               </a>
             ) : (
               <a

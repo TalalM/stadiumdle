@@ -44,8 +44,9 @@ export function getDirectionEmoji(guess: Guess) {
 }
 
 export function computeProximityPercent(distance: number): number {
-  const proximity = Math.max(MAX_DISTANCE_ON_EARTH - distance, 0);
-  return Math.floor((proximity / MAX_DISTANCE_ON_EARTH) * 100);
+  const maxDistance = MAX_DISTANCE_ON_EARTH / 3
+  const proximity = Math.max(maxDistance - distance, 0);
+  return Math.floor((proximity / maxDistance) * 100);
 }
 
 export function generateSquareCharacters(

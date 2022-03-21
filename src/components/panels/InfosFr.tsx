@@ -1,7 +1,7 @@
 import { Guesses } from "../Guesses";
 import { Panel } from "./Panel";
 import React from "react";
-import { Flagdle } from "../Flagdle";
+import { Stadiumdle } from "../Stadiumdle";
 import { formatDistance } from "../../domain/geography";
 import { SettingsData } from "../../hooks/useSettings";
 import { Twemoji } from "@teuteuf/react-emoji-render";
@@ -18,11 +18,11 @@ export function InfosFr({ isOpen, close, settingsData }: InfosProps) {
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">
         <div>
           {" "}
-          Devinez le <Flagdle /> en 6 essais.
+          Devinez le <Stadiumdle /> en 6 essais.
         </div>
-        <div>Chaque essai doit être un pays valide.<br/>
+        <div>Vous avez la photo d'un stade de football et vous devez deviner la ville dans laquelle il est situé. Chaque essai doit être une ville valide.<br/>
           Après chaque essai, vous aurez la distance, la direction et la
-          proximité entre votre essai et le pays cible.
+          proximité entre votre essai et la ville cible.
         </div>
       </div>
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">
@@ -32,18 +32,18 @@ export function InfosFr({ isOpen, close, settingsData }: InfosProps) {
             rowCount={1}
             guesses={[
               {
-                name: "Chili",
-                direction: "NE",
-                distance: 13_557_000,
+                name: "Stockholm",
+                direction: "SW",
+                distance: 2_559_000,
               },
             ]}
             settingsData={settingsData}
           />
           <div className="my-2">
-            Votre essai <span className="uppercase font-bold">Chili</span> est à{" "}
-            {formatDistance(13_557_000, settingsData.distanceUnit)} du pays
-            cible, le pays cible se trouve dans la direction Nord-Est et vous
-            avez une proximité de seulement 32% car votre essai est plutôt
+            Votre essai <span className="uppercase font-bold">Stockholm</span> est à{" "}
+            {formatDistance(2_559_000, settingsData.distanceUnit)} de la ville
+            cible, la ville cible se trouve dans la direction Sud-Ouest et vous
+            avez une proximité de seulement 61% car votre essai est plutôt
             éloigné !
           </div>
         </div>
@@ -52,18 +52,18 @@ export function InfosFr({ isOpen, close, settingsData }: InfosProps) {
             rowCount={1}
             guesses={[
               {
-                name: "Finlande",
-                direction: "SE",
-                distance: 3_206_000,
+                name: "Paris",
+                direction: "S",
+                distance: 1_062_000,
               },
             ]}
             settingsData={settingsData}
           />
           <div className="my-2">
             Votre second essai{" "}
-            <span className="uppercase font-bold">Finlande</span> est plus
+            <span className="uppercase font-bold">Paris</span> est plus
             proche ! La bonne réponse est à{" "}
-            {formatDistance(3_206_000, settingsData.distanceUnit)}, au Sud-Est
+            {formatDistance(1_062_000, settingsData.distanceUnit)}, au Sud
             et la proximité est de 84%!
           </div>
         </div>
@@ -72,7 +72,7 @@ export function InfosFr({ isOpen, close, settingsData }: InfosProps) {
             rowCount={1}
             guesses={[
               {
-                name: "Liban",
+                name: "Valence",
                 direction: "N",
                 distance: 0,
               },
@@ -80,27 +80,18 @@ export function InfosFr({ isOpen, close, settingsData }: InfosProps) {
             settingsData={settingsData}
           />
           <div className="my-2">
-            Prochain essai, <span className="uppercase font-bold">Liban</span>,
-            c&apos;est le pays à deviner ! Bien joué !{" "}
+            Prochain essai, <span className="uppercase font-bold">Valence</span>,
+            c&apos;est la ville à deviner ! Bien joué !{" "}
             <Twemoji text="🎉" options={{ className: "inline-block" }} />
           </div>
         </div>
       </div>
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3 font-bold">
-        Un nouveau <Flagdle /> sera disponible chaque jour !
+        Un nouveau <Stadiumdle /> sera disponible chaque jour !
       </div>
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">
         <div>
-          <Flagdle /> n'a pas de FAQ mais vous pouvez aller regarder la{" "}
-          <a
-            className="underline"
-            href="https://worldle.notion.site/Worldle-4005ca16fc9341e7be8adcfd30628146"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            FAQ Worldle
-          </a>{" "}
-          si vous avez des questions ! Vous pouvez aussi directement me contacter sur {" "}
+          <Stadiumdle /> n'a pas de FAQ mais vous si vous avez la moindre question, vous pouvez directement me contacter sur {" "}
           <a
             className="underline"
             href="https://twitter.com/talalmazroui"
@@ -112,7 +103,7 @@ export function InfosFr({ isOpen, close, settingsData }: InfosProps) {
         </div>
       </div>
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">
-        <Flagdle /> est <b>fortement</b> inspiré de{" "}
+        <Stadiumdle /> est <b>fortement</b> inspiré de{" "}
         <a
           className="underline"
           href="http://worldle.teuteuf.fr/"
@@ -126,7 +117,7 @@ export function InfosFr({ isOpen, close, settingsData }: InfosProps) {
           rel="noopener noreferrer"
         >
           @teuteuf
-        </a>. Sauf que sur <Flagdle />, vous devinez le pays à partir de son drapeau et pas sa forme !
+        </a>.
       </div>
       <div className="space-y-3 text-justify pb-3">
         <div>
@@ -142,7 +133,7 @@ export function InfosFr({ isOpen, close, settingsData }: InfosProps) {
           - (
           <a
             className="underline"
-            href="https://github.com/TalalM/flagdle/"
+            href="https://github.com/TalalM/stadiumdle/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -159,6 +150,14 @@ export function InfosFr({ isOpen, close, settingsData }: InfosProps) {
             rel="noopener noreferrer"
           >
             Countrydle
+          </a>, {" "}
+          <a
+            className="underline"
+            href="https://www.flagdle.app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Flagdle
           </a>
         </div>
         <div>

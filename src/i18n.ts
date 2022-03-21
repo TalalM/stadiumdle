@@ -33,9 +33,9 @@ const resources = {
         guessDistribution: "Guess distribution:",
       },
       install: {
-        title: "Flagdle",
+        title: "Stadiumdle",
         descritpionTitle: "App Install:",
-        description: "Add Flagdle to Home Screen to play it easily!",
+        description: "Add Stadiumdle to Home Screen to play it easily!",
         instructionTitle: "Instructions:",
         instructionActionOk: "OK",
         instructionActionCancel: "Cancel",
@@ -86,10 +86,10 @@ const resources = {
         guessDistribution: "Répartitions des victoires:",
       },
       install: {
-        title: "Flagdle",
+        title: "Stadiumdle",
         descritpionTitle: "Installer l'app:",
         description:
-          "Ajouter Flagdle sur l'écran d'accueil pour le retrouver plus facilement !",
+          "Ajouter Stadiumdle sur l'écran d'accueil pour le retrouver plus facilement !",
         instructionTitle: "Instructions :",
         instructionActionOk: "OK",
         instructionActionCancel: "Annuler",

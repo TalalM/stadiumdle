@@ -1,9 +1,9 @@
 import React from "react";
 
-export function Flagdle() {
+export function Stadiumdle() {
   return (
     <span className="font-bold">
-      FLAG<span className="text-green-600">D</span>LE
+      STADIUM<span className="text-green-600">D</span>LE
     </span>
   );
 }

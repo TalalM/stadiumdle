@@ -1,6 +1,6 @@
 {
-  "short_name": "Flagdle",
-  "name": "Wordle like game with country flags",
+  "short_name": "Stadiumdle",
+  "name": "Wordle like game with stadium images",
   "icons": [
     {
       "src": "favicon.ico",
