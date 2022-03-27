@@ -34,7 +34,7 @@ export function CityInput({
               sanitizeCityName(cityName).includes(
                 sanitizeCityName(value)
               )
-            )
+            ).sort()
         )
       }
       onSuggestionsClearRequested={() => setSuggestions([])}
